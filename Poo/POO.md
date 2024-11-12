@@ -1,7 +1,7 @@
 
 ### Conceptos base de programación orientado a objetos
 
-### 1.Principios SOLID
+## 1.Principios SOLID
 
 **S**→ una sola responsabilidad por clase
 
@@ -19,7 +19,7 @@ Explicación: básicamente es implementar abstracciones con las funcionalidades 
 
 Después al utilizar el método de esa interfaz , se ejecutará en  la forma que las clase que implementa esa interfaz indicaron.
 
-###   2. Clases y Objetos
+##   2. Clases y Objetos
 
 - **Clase:** Una plantilla para crear objetos. Define un tipo de objeto según sus propiedades y métodos.
     
@@ -27,7 +27,7 @@ Después al utilizar el método de esa interfaz , se ejecutará en  la forma qu
     
 - Para saber  si es una clase se debe de pensar si tiene comportamiento(funciones) o estado(atributos ) propio.
 
-#### 3. Cohesión y  Acoplamiento
+## 3. Cohesión y  Acoplamiento
 * **Acoplamiento**: Se refiere al grado de dependencia entre dos o mas clases. Posible solución con inversión de dependencias(Soli**d**) Ejemplo:
 `interface Cliente {`
     `String getNombre();`
@@ -61,9 +61,8 @@ Después al utilizar el método de esa interfaz , se ejecutará en  la forma qu
 En diseño de software, se busca **alta cohesión** y **bajo acoplamiento**. Esto significa que cada clase debe enfocarse en una única responsabilidad (alta cohesión) y estar lo menos dependiente posible de otras clases (bajo acoplamiento).
 De otra manera seria la **S  y D** de principios SOLID. 
 
-### 4. Herencia 
-[[Herencia]]
-### 5. Polimorfismo
+## 4. Herencia [[Herencia]]
+## 5. Polimorfismo
 - **Definición:** La capacidad de los objetos de diferentes clases de ser tratados como objetos de una clase común. Es más comúnmente aplicado a través de interfaces y herencia.
 ###### **Hay dos formas de polimorfismo:**     
 - **Sobrecarga de métodos:** Permite definir múltiples métodos con el mismo nombre en la misma clase pero con diferentes parámetros.
@@ -88,7 +87,7 @@ De otra manera seria la **S  y D** de principios SOLID.
 			`System.out.println("El gato maúlla");`
 		`}`
 	`}`
-#### 6. Encapsulamiento
+## 6. Encapsulamiento
 El encapsulamiento es un principio de POO que consiste en restringir el acceso a los atributos y métodos de un objeto, protegiendo así el estado interno del objeto y evitando modificaciones no controladas.
 - **Modificadores de Acceso**:
     - **`private`**: Solo accesible dentro de la misma clase.
@@ -96,7 +95,7 @@ El encapsulamiento es un principio de POO que consiste en restringir el acceso a
     - **`public`**: Accesible desde cualquier lugar.
 	- **`package-private`** (sin modificador): Accesible solo dentro del mismo paquete.
 *  **Getters y Setters**:
-### 7. Abstracción
+## 7. Abstracción
 - **Definición**: La abstracción es un principio de POO que consiste en ocultar los detalles de implementación y exponer solo las características relevantes de un objeto. Permite centrarse en lo que un objeto hace en lugar de cómo lo hace.
 ###### **Maneras de realizarlo**
 - Clases abstractas: Clases que no pueden ser instanciadas por sí mismas y están destinadas a ser subclases.
@@ -105,7 +104,7 @@ El encapsulamiento es un principio de POO que consiste en restringir el acceso a
 ###### **Encapsulamiento vs Abstracción**:
  Aunque ambos conceptos están relacionados, el encapsulamiento se centra en proteger el estado interno de un objeto, mientras que la abstracción se refiere a ocultar detalles innecesarios y mostrar solo la funcionalidad relevante al usuario.
 
-### 8. Relaciones entre Clases
+## 8. Relaciones entre Clases
 ###### **Tipos de relaciones de manera conceptual**
 - ***Asociación:*** Una relación donde todos los objetos tienen su propio ciclo de vida y no hay un propietario. 
 - ***Agregación:*** Una forma de asociación con una relación de "todo/parte" donde las partes pueden existir independientemente del todo.
@@ -174,12 +173,11 @@ Ejemplo con checked:
 }
 
 
-### 10 . Collections
-[[Collections]]
+## 10 . Collections[[Collections]]
 
 
 
-### 11. Métodos Estáticos y Variables Estáticas
+## 11. Métodos Estáticos y Variables Estáticas
 - Métodos Estáticos: Métodos que pertenecen a la clase en lugar de a instancias individuales. Se llaman usando el nombre de la clase.
 
 - Variables Estáticas: Variables que pertenecen a la clase y se comparten entre todas las instancias de la clase.
