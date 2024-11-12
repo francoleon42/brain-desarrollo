@@ -1,6 +1,5 @@
- Para convertirte en un experto en Hibernate en el contexto de aplicaciones web con Java y Spring, aquí hay una serie de temas que deberías dominar:
 
-### 1. **Fundamentos de ORM (Mapeo Objeto-Relacional)**
+## 1. **Fundamentos de ORM (Mapeo Objeto-Relacional)**
 
 #### JPA
 * Es una **especificacion** esto significa que JPA es un conjunto de normas y reglas definidas dentro de la plataforma Java para hacer el mapeo objeto-relacional (ORM) en aplicaciones Java.
@@ -23,7 +22,7 @@ Aunque en el código no interactúas directamente con Hibernate
 	**Optimización de rendimiento y características adicionales**: Hibernate aporta características como el uso de cachés de primer y segundo nivel, la generación automática de esquemas, y el manejo de estrategias de `fetching` (carga) para mejorar el rendimiento de la aplicación.
 		
 	
-### 2. **Configuración de Hibernate con Spring Boot**
+## 2. **Configuración de Hibernate con Spring Boot**
 - **Archivo de Configuración**: (Configuracion basica)
 		`spring:`
 		  `datasource:`
@@ -58,7 +57,7 @@ Aunque en el código no interactúas directamente con Hibernate
     - `dialect` : cambiar el dialecto en funcion de la base de datos que estes usando.
 
 		
-### 3. **Entidades y Anotaciones Básicas de JPA/Hibernate**
+## 3. **Entidades y Anotaciones Básicas de JPA/Hibernate**
 `@Entity`
 `@Table(name = "producto")`
 `public class Producto {`
@@ -73,7 +72,7 @@ Aunque en el código no interactúas directamente con Hibernate
 * `@GeneratedValue`:  Define la estrategia para la generación de valores de clave primaria, como `AUTO`, `IDENTITY`, `SEQUENCE`, y `TABLE`.
 * `@Column` Se usa para personalizar el mapeo de una columna en la base de datos. Puedes especificar el nombre de la columna, si es única, si permite valores nulos, entre otras propiedades.
 
-### 4. **Gestión de Relaciones y Cardinalidad**
+## 4. **Gestión de Relaciones y Cardinalidad**
 
 ##### Cardinalidad y sus relaciones.
 -  **@OneToOne** Define una relación de uno a uno entre dos entidades.
@@ -159,7 +158,7 @@ La entidad relacionada **se carga inmediatamente** junto con la entidad principa
 
 MA
 - Configuración de relaciones entre entidades (`@OneToOne`, `@OneToMany`, `@ManyToOne`, `@ManyToMany`) y cómo funciona el `cascade` y `fetch`.
-### 5. **Optimización y Rendimiento**
+## 5. **Optimización y Rendimiento**
 #### Cache en hibernate
 ###### Cache de primer nivel(L1):
 Es un cache interno de hibernate, Hibernate guarda temporalmente las entidades que ya se han consultado y las reutiliza, evitando consultas reduntdantes a la BD.
@@ -221,7 +220,7 @@ Para no tener que hacer dos consultas, puedes utilizar un **`JOIN FETCH`** para 
 ###### "Observacion":
 * Podrias utilizar en vez de **`LAZY`** , **`EAGER`**  y obtendiras el mismo resultado ,pero utilizando **`JOIN FETCH`** puede hacer que solo para esta consulta te traiga los datos de la relacion por lo que es productivo si es que no en todas las consultas te interezaria traerte las informacion de la entidad relacion .
 
-### 6. **Consultas 
+## 6. **Consultas 
 
 - Entiende las diferencias entre JPQL, HQL y SQL nativo, y cuándo es mejor usar cada uno.
 ##### JPQL 
@@ -265,7 +264,7 @@ La **Criteria API** te permite construir consultas de manera programática. Es �
 
 `// Ejecutar la consulta`
 `List<Autor> autores = entityManager.createQuery(cq).getResultList();`
-### 13. **Aspectos Avanzados de Mapeo y Herencia**
+## 7. **Aspectos Avanzados de Mapeo y Herencia**
 #### **Mapeo de Herencia en Entidades**
 
 JPA proporciona varias estrategias de herencia, y puedes elegir la adecuada según el diseño de tu base de datos y los requisitos de tu aplicación. Para definir la herencia en JPA:
@@ -328,7 +327,7 @@ En este ejemplo, `precioTotal` no es una columna real en la base de datos. En su
 
 Aquí, `ProductoResumen` es una entidad que se mapea a una consulta SQL en lugar de una tabla. La consulta calcula `precioTotal` en la base de datos y lo asigna al campo correspondiente en la entidad.
 
-### 8. **Transacciones y Concurrencia**
+## 8. **Transacciones y Concurrencia**
 #### Transacciones
 ##### Propagacion 
 La propagación define cómo una transacción actual se comportará cuando un método marcado como `@Transactional` llame a otro método que también tiene esta anotación. Spring ofrece varias opciones para configurar la propagación de transacciones:
@@ -346,33 +345,36 @@ La propagación define cómo una transacción actual se comportará cuando un m�
 ##### Niveles de Isolations
 El aislamiento controla cómo se ve el estado de la base de datos desde una transacción en curso, y cómo interactúan las transacciones entre sí. Cada nivel de aislamiento aborda ciertos problemas de concurrencia:
 
-- **READ_UNCOMMITTED**: No aplica ningún bloqueo en los datos; es el nivel menos seguro y permite lecturas sucias, lecturas no repetibles y fantasmas.
-- **READ_COMMITTED**: Evita las lecturas sucias al asegurarse de que solo los datos confirmados estén disponibles. Permite lecturas no repetibles y fantasmas.
-- **REPEATABLE_READ**: Garantiza que las filas leídas por una transacción no cambiarán hasta que esta finalice, evitando lecturas no repetibles. No evita fantasmas.
-- **SERIALIZABLE**: Es el nivel más alto y restringido, ya que impide todos los problemas de concurrencia (lecturas sucias, lecturas no repetibles y fantasmas) al bloquear la tabla completa.
+- **READ_UNCOMMITTED**: -Leer datos que aún no se han guardado (confirmado) en la base de datos por otra transacción.
+- **READ_COMMITTED**:Solo puedes ver datos que otras transacciones ya han confirmado.
+- **REPEATABLE_READ**: Garantiza que si lees algo una vez en tu transacción, seguirá igual hasta que termines, evitando las **lecturas no repetibles**.
+- **SERIALIZABLE**: Trata cada transacción como si fuera la única que se ejecuta en ese momento, eliminando todos los problemas de concurrencia.
 `@Transactional(isolation = Isolation.REPEATABLE_READ)`
 `public void metodoConAislamiento() {`
     `// Operaciones con nivel de aislamiento REPEATABLE_READ`
 `}`
 
-- Administración de transacciones y cómo funciona la propagación (`propagation`) y el aislamiento (`isolation`) en el contexto de Spring.
-* Los bloqueos en las bases de datos.
-- Uso de la anotación `@Transactional` en los servicios de Spring y sus implicaciones.
+## 10. **Auditoría y Validación**
+##### Validación de Datos con Bean Validation y Hibernate Validator
+La validación permite asegurarse de que los datos de una entidad cumplen con ciertos requisitos antes de almacenarse. Con Bean Validation (API `javax.validation`) y Hibernate Validator, puedes definir reglas de validación directamente en los atributos de las entidades mediante anotaciones
 
+`class Producto {`
+    `@NotNull(message = "El nombre no puede ser nulo")`
+    `@Size(min = 2, max = 100, message = "El nombre debe tener entre 2 y 100 caracteres")`
+    `private String nombre;`
+`}`
 
-### 9. **Migraciones de Bases de Datos**
+Spring Boot valida automáticamente las entidades antes de guardarlas si se añaden las anotaciones de validación. En los controladores, puedes forzar la validación de los parámetros de entrada añadiendo `@Valid` en el método:
 
+`@RestController`
+`@RequestMapping("/productos")`
+`public class ProductoController {`
+    `@PostMapping`
+    `public Producto crearProducto(@Valid @RequestBody Producto producto) {`
+        `// Si el producto no es válido, Spring lanzará una excepción`
+        `return productoService.guardar(producto);`
+    `}`
+`}`
+## 10. **Migraciones de Bases de Datos**
 - Uso de herramientas de migración de esquemas de base de datos como Flyway o Liquibase junto con Hibernate.
 - Gestión de los cambios de esquema a medida que el modelo de datos evoluciona en el tiempo.
-
-### 10. **Auditoría y Validación**
-
-- Implementación de la auditoría automática en entidades, como las fechas de creación y modificación (`@CreatedDate`, `@LastModifiedDate`).
-- Integración con Bean Validation (`javax.validation`) y Hibernate Validator para validar datos de las entidades.
-
-
-
-### 14. **Integración con Herramientas de Pruebas**
-
-- Cómo realizar pruebas unitarias e integradas de tus repositorios y servicios que utilizan Hibernate.
-- Uso de herramientas como H2 para realizar pruebas en memoria, además de frameworks como Testcontainers para pruebas de integración con bases de datos.

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sin título 1.md",
+                "file": "Spring/Migraciones de Bases de Datos.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sin título 1"
+              "title": "Migraciones de Bases de Datos"
             }
           }
         ]
@@ -163,11 +163,12 @@
   },
   "active": "2ce487868bf25e22",
   "lastOpenFiles": [
+    "Spring/Migraciones de Bases de Datos.md",
+    "Spring/JPA y HIBERNATE.md",
+    "Spring/JPA + Hibernate.md",
     "Roadmap2024-Java-Todocode.pdf",
     "Pasted image 20241031160713.png",
-    "Sin título 1.md",
     "Sin título.md",
-    "Spring/JPA + Hibernate.md",
     "Spring/Inyección de dependencias (DI).md",
     "Spring/Spring.md",
     "Spring/Maven.md",
