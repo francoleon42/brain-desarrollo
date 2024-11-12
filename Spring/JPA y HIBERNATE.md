@@ -378,3 +378,4 @@ Spring Boot valida automáticamente las entidades antes de guardarlas si se aña
 ## 10. **Migraciones de Bases de Datos**
 - Uso de herramientas de migración de esquemas de base de datos como Flyway o Liquibase junto con Hibernate.
 - Gestión de los cambios de esquema a medida que el modelo de datos evoluciona en el tiempo.
+[[Migraciones de Bases de Datos]]
