@@ -4,20 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "3bece76ca2a5e29e",
+        "id": "b40766a8fef2a6d2",
         "type": "tabs",
         "children": [
           {
-            "id": "211b9b5adec32f35",
+            "id": "31b0ddc58a1b42d8",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Vista gráfica"
+              "type": "markdown",
+              "state": {
+                "file": "WEB/Web.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Web"
+            }
+          },
+          {
+            "id": "77c0e1c6ccfebc5c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "WEB/REST.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "REST"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -157,11 +176,50 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "211b9b5adec32f35",
+  "floating": {
+    "id": "2d39b990946750e5",
+    "type": "floating",
+    "children": [
+      {
+        "id": "2aea561b16a13d07",
+        "type": "window",
+        "children": [
+          {
+            "id": "0dfc74f87d4a0ebb",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "211b9b5adec32f35",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "Roadmap2024-Java-Todocode.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "Roadmap2024-Java-Todocode"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 127,
+        "y": 40,
+        "width": 1082,
+        "height": 728,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "77c0e1c6ccfebc5c",
   "lastOpenFiles": [
+    "WEB/Web.md",
+    "WEB/REST.md",
+    "Roadmap2024-Java-Todocode.pdf",
     "Java.md",
     "Poo/POO.md",
-    "Roadmap2024-Java-Todocode.pdf",
     "Poo/Herencia.md",
     "Spring/Migraciones de Bases de Datos.md",
     "Spring/Spring.md",
@@ -173,7 +231,6 @@
     "Spring/Maven.md",
     "Pasted image 20241029153440.png",
     "Pasted image 20241029181415.png",
-    "WEB/Web.md",
     "WEB",
     "Spring",
     "Poo/Collections.md",
