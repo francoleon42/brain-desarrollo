@@ -1,8 +1,10 @@
 # Fundamento Rest [[REST]]
 
+# **API**
+### *Web Service* 
 
-## *Arquitectura C/S**
+# Arquitectura C/S** 
 
-## **Servelts**
-## **API**
 ## **Servidores Web**
+
+######
