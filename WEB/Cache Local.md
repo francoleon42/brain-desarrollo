@@ -1,8 +1,5 @@
-#### Porque utilizar cache ?
 
-==***CHACHE DISTRIBUIDA* (Redis)*==
-## CHACHE LOCAL
-
+El caché local almacena datos directamente en el sistema que los utiliza, como el servidor de la aplicación o el dispositivo del cliente. Está diseñado para ser rápido y accesible localmente sin necesidad de consultar recursos externos
 ### Cache Aside Strategy
 ![[Pasted image 20241114172354.png]]
 **Esta estrategia consiste :**

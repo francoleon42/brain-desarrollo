@@ -38,3 +38,15 @@ update: Actualiza el esquema de la base de datos para que coincida con las entid
 create: Crea el esquema de la base de datos, descartando los datos existentes.
 create-drop: Crea el esquema de la base de datos al inicio de la aplicación y lo elimina al final.
 none: No realiza ninguna acción con el esquema de la base de datos.
+
+
+
+
+
+# **Cosas Que ver** 
+
+1- Experiencia con servicios SOAP, REST y WebSockets
+2- Programación en Transact SQL.
+3- Conocimiento de Enzyme y Jest
+4- Manejo de Eclipse Link
+5- Experiencia con J2EE
